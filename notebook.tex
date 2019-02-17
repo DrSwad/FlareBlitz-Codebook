@@ -1,0 +1,100 @@
+\documentclass[10pt]{article}
+\usepackage[left=0.4in,right=0.4in,top=0.7in,bottom=0.4in]{geometry}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{tocloft}
+\usepackage{pdflscape}
+\usepackage{multicol}
+
+\renewcommand*{\ttdefault}{pcr}
+\renewcommand\cftsecfont{\fontsize{8}{9}\bfseries}
+\renewcommand\cftsecpagefont{\fontsize{8}{9}\mdseries}
+\renewcommand\cftsubsecfont{\fontsize{5}{6}\mdseries}
+\renewcommand\cftsubsecpagefont{\fontsize{5}{6}\mdseries}
+\renewcommand\cftsecafterpnum{\vspace{-1ex}}
+\renewcommand\cftsubsecafterpnum{\vspace{-1ex}}
+
+\lstdefinestyle{shared}{
+    belowcaptionskip=1\baselineskip,
+    breaklines=true,
+    xleftmargin=\parindent,
+    showstringspaces=false,
+    basicstyle=\fontsize{5.5}{6}\ttfamily,
+}
+\lstdefinestyle{cpp}{
+    style=shared,
+    language=C++,
+    keywordstyle=\bfseries\color{red!22!green!28!blue!50!},
+    commentstyle=\itshape\color{black!60!},
+    identifierstyle=\bfseries\color{red!19!green!42!blue!39!},
+    stringstyle=\bfseries\color{blue!40!green!20!violet!40!},
+}
+\lstdefinestyle{java}{
+    style=shared,
+    language=Java,
+    keywordstyle=\bfseries\color{red!22!green!28!blue!50!},
+    commentstyle=\itshape\color{black!60!},
+    identifierstyle=\bfseries\color{red!19!green!42!blue!39!},
+    stringstyle=\bfseries\color{blue!40!green!20!violet!40!},
+}
+\lstdefinestyle{py}{
+    style=shared,
+    language=Python,
+    keywordstyle=\bfseries\color{red!22!green!28!blue!50!},
+    commentstyle=\itshape\color{black!60!},
+    identifierstyle=\bfseries\color{red!19!green!42!blue!39!},
+    stringstyle=\bfseries\color{blue!40!green!20!violet!40!},
+}
+\lstdefinestyle{txt}{
+    style=shared,
+}
+\lstset{escapechar=@}
+
+\pagestyle{fancy}
+\fancyhead[L]{University of Dhaka}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{}
+
+\fancypagestyle{plain}
+{
+\fancyhead[L]{University of Dhaka}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{}
+}
+
+\title{\vspace{8ex}\Large{DU\_FireBlitz Codebook}}
+\author{
+Nayeemul Islam Swad\\
+\texttt{@DrSwad}
+\and
+Asif Jawad\\
+\texttt{@\_timelord}
+\and
+Thanic Nur Samin\\
+\texttt{@Kaleidoscope25}
+\and
+}
+\date{\today}
+
+\begin{document}
+\begin{landscape}
+\begin{multicols}{2}
+
+\maketitle
+\tableofcontents
+\pagestyle{fancy}
+
+\begin{figure}[t]
+\includepdf[angle=90, width=11em, offset=-47ex -40ex]{Icon.jpeg}
+\centering
+\end{figure}
+
+\input contents.tex
+
+\end{multicols}
+\end{landscape}
+\end{document}
